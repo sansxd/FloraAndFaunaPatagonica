@@ -1,0 +1,74 @@
+﻿@model FloraAndFauna.Models.Planta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles de la planta</h2>
+
+<div>
+    <h4>Planta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombrePlanta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombrePlanta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Especie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Especie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Familia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Familia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreChileno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreChileno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreIngles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreIngles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Idplanta }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

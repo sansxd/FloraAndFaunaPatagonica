@@ -1,0 +1,69 @@
+﻿@model IEnumerable<FloraAndFauna.Models.Planta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("ingresar planta", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombrePlanta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Especie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Familia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreChileno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreIngles)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombrePlanta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Especie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Familia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreChileno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreIngles)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Idplanta }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.Idplanta }) |
+            @Html.ActionLink("borrar", "Delete", new { id=item.Idplanta })
+        </td>
+    </tr>
+}
+
+</table>
